@@ -1,5 +1,4 @@
 .taskLists{
-    border: 1px solid white;
     display: flex;
     direction: rows;
     width: 100%;
@@ -16,7 +15,6 @@
 }
 
 .listname{
-    border: 1px solid white;
     width: 23rem;
     text-align: center;
 }

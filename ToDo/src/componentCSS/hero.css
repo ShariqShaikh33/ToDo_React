@@ -1,0 +1,22 @@
+.mainCounterDiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.counter{
+    border: 1px solid white;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counterText{
+}
+
+.counterValue{
+}
+

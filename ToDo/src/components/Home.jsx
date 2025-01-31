@@ -8,31 +8,29 @@ import "../componentCSS/Home.css";
 
 
 const Home=()=>{
-  const [todo,setTodo] = useState([
-      {name:"Task 1", id: self.crypto.randomUUID(), isCompleted: false, isInProgress: false}, 
-      {name:"Task 2", id: self.crypto.randomUUID(), isCompleted: false, isInProgress: false}, 
-      {name:"Task 3", id: self.crypto.randomUUID(), isCompleted: false, isInProgress: false}
-  ]);
-  const [inProgress,setProgress] = useState([
-      {name:"Task 4", id: self.crypto.randomUUID(), isCompleted: false, isInProgress: true}, 
-      {name:"Task 5", id: self.crypto.randomUUID(), isCompleted: false, isInProgress: true}, 
-      {name:"Task 6", id: self.crypto.randomUUID(), isCompleted: false, isInProgress: true}
-  ]);
-  const [done,setDone] = useState([
-      {name:"Task 7", id: self.crypto.randomUUID(), isCompleted: true, isInProgress: false}, 
-      {name:"Task 8", id: self.crypto.randomUUID(), isCompleted: true, isInProgress: false}, 
-      {name:"Task 9", id: self.crypto.randomUUID(), isCompleted: true, isInProgress: false}
-  ]);
+  const [taskList,setTaskList] = useState([
+      {name:"Task 1", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false}, 
+      {name:"Task 2", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false}, 
+      {name:"Task 3", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false},
+      {name:"Task 4", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
+      {name:"Task 5", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
+      {name:"Task 6", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false},
+      {name:"Task 7", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true },
+      {name:"Task 8", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }, 
+      {name:"Task 9", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }
+  
+    ]);
 
-
+    
   return (
     <>
-      <ToDoHero todo_size={todo.length} progress_size={todo.length} done_size={done.length}/>
-      <AddTask/>
+
+      <ToDoHero taskList={taskList}/>
+      <AddTask setTaskList={setTaskList}/>
       <div className="taskLists">
-        <ToDolist todo={todo}/>
-        <Inprogresslist progress={inProgress}/>
-        <Donelist done={done}/>
+        <ToDolist taskList={taskList}/>
+        <Inprogresslist taskList={taskList}/>
+        <Donelist taskList={taskList}/>
       </div>
 
     </>

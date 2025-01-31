@@ -1,14 +1,18 @@
 import React from "react";
-import App from "./App";
 import Item from "./Item";
 
-const ToDolist=(todo)=>{
-    console.log(todo.todo);
+const ToDolist=({taskList})=>{
+
+    const todoitemlist=()=>{
+        
+        let size = taskList.filter((e)=>(e.isInProgress==false && e.isCompleted==false))
+        return (size);
+      }
     return(
         <div className="listdiv">
             <p className="listname">To-Do</p>
             <div type="none" className="list todoList" id="todo"> 
-                {todo.todo?.map((e)=>{
+                {todoitemlist().map((e)=>{
                     return <Item key={e.id} name={e.name}></Item>
                 })}
             </div>
