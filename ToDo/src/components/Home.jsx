@@ -28,8 +28,8 @@ const Home=()=>{
       <ToDoHero taskList={taskList}/>
       <AddTask setTaskList={setTaskList}/>
       <div className="taskLists">
-        <ToDolist taskList={taskList}/>
-        <Inprogresslist taskList={taskList}/>
+        <ToDolist taskList={taskList} setTaskList={setTaskList}/>
+        <Inprogresslist taskList={taskList} setTaskList={setTaskList}/>
         <Donelist taskList={taskList}/>
       </div>
 

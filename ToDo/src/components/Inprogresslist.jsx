@@ -2,7 +2,7 @@ import React from "react";
 import App from "./App";
 import Item from "./Item";
 
-const Inprogresslist=({taskList})=>{
+const Inprogresslist=({taskList, setTaskList})=>{
 
     const progressitemlist=()=>{
         let size = taskList.filter((e)=>(e.isInProgress==true && e.isCompleted==false))
@@ -15,7 +15,7 @@ const Inprogresslist=({taskList})=>{
             <div className="list todoList" id="inprogress"> 
                 
                 {progressitemlist()?.map((e)=>{
-                    return <Item key={e.id} name={e.name}></Item>
+                    return <Item key={e.id} id={e.id} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
                 })}
             </div>
         </div>
