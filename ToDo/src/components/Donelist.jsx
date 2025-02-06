@@ -14,7 +14,7 @@ const Donelist=({taskList, setTaskList})=>{
                 <div className="list todoList" id="done">
 
                 {doneitemlist().map((e)=>{
-                    return <Item key={e.id} id={e.id} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"disable"} button2={"disable"}></Item>
+                    return <Item key={e.id} id={e.id} color={"green"} date={e.date} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"disable"} button2={"disable"}></Item>
                 })}
             </div>
         </div>

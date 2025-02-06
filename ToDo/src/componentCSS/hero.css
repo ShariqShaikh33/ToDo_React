@@ -2,23 +2,40 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .counter{
     border: 1px solid white;
+    border-radius: 20px;
+    height: auto;
     width: 25rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    margin: 0px;
 }
 
 .counterText{
+    border: 1px solid white;
+    font-size: 20px;
+    margin: 0px;
 }
 
 .counterValue{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
 }
+
 
 .disable{
     display: none;

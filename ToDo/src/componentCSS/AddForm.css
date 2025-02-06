@@ -20,7 +20,10 @@
     width: 75%;
     background: none;
     border: none;
-    color: white;
+    color: black;
+}
+.addTaskBar:focus{
+    outline: none;
 }
 
 .addTaskBtn{

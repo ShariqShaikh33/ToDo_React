@@ -9,7 +9,7 @@ const ToDoHero=({taskList})=>{
       }
 
     return(
-        <div>
+        <div className="mainHeroDiv">
             <p>ToDo App</p>
             <div className="mainCounterDiv">
                 <div className="counter">

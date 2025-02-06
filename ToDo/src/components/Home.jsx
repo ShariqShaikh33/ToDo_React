@@ -9,21 +9,21 @@ import "../componentCSS/Home.css";
 
 const Home=()=>{
   const [taskList,setTaskList] = useState([
-      {name:"Task 1", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false}, 
-      {name:"Task 2", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false}, 
-      {name:"Task 3", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false},
-      {name:"Task 4", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
-      {name:"Task 5", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
-      {name:"Task 6", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false},
-      {name:"Task 7", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true },
-      {name:"Task 8", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }, 
-      {name:"Task 9", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }
+      {name:"Task 1", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false}, 
+      {name:"Task 2", date: "2002-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false}, 
+      {name:"Task 3", date: "2003-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: false},
+      {name:"Task 4", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
+      {name:"Task 5", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
+      {name:"Task 6", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false},
+      {name:"Task 7", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true },
+      {name:"Task 8", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }, 
+      {name:"Task 9", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }
   
     ]);
 
     
   return (
-    <>
+    <div className="mainHomeDiv">
 
       <ToDoHero taskList={taskList}/>
       <AddTask setTaskList={setTaskList}/>
@@ -33,7 +33,7 @@ const Home=()=>{
         <Donelist taskList={taskList}/>
       </div>
 
-    </>
+    </div>
   )
 }
 

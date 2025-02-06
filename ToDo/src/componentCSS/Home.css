@@ -1,37 +1,41 @@
+.mainHomeDiv{
+    width: 100%;
+    height: fit-content;
+    background: white;
+    color: black;
+    padding-bottom: 4rem;
+
+}
+
+.mainHeroDiv{
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    background: white;
+    border: 1px solid white;
+}
+
 .taskLists{
     display: flex;
     direction: rows;
     width: 100%;
-    height: 50%;
-    justify-content:space-evenly
+    justify-content:space-evenly;
 }
 
-.listdiv{
-    border: 1px solid white;
+
+.listdiv{ 
+    border-radius: 20px;
     width: 25rem;
     display: flex;
     flex-direction: column;   
     align-items: center;
+    height: fit-content;
+    background: lightblue;
+    padding-bottom: 3rem;
 }
 
 .listname{
     width: 23rem;
     text-align: center;
-}
-
-.itemDiv{
-    border: 1px solid white;
-    width: 100%;
-    
-}
-
-.list{
-    type: none;
-    width: 23rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    height: fit-content;
 }

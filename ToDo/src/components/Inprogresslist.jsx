@@ -15,7 +15,7 @@ const Inprogresslist=({taskList, setTaskList})=>{
             <div className="list todoList" id="inprogress"> 
                 
                 {progressitemlist()?.map((e)=>{
-                    return <Item key={e.id} id={e.id} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
+                    return <Item key={e.id} id={e.id} date={e.date} color={"yellow"} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
                 })}
             </div>
         </div>
