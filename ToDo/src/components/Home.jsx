@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ToDoHero from "./ToDoHero";
 import AddTask from "./AddTask";
-import ToDolist from "./ToDolist";
-import Inprogresslist from "./Inprogresslist";
-import Donelist from "./Donelist";
+import ToDolist from "./ListComponents/ToDolist";
+import Inprogresslist from "./ListComponents/Inprogresslist";
+import Donelist from "./ListComponents/Donelist";
 import "../componentCSS/Home.css";
 
 
@@ -15,9 +15,9 @@ const Home=()=>{
       {name:"Task 4", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
       {name:"Task 5", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false}, 
       {name:"Task 6", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: true , isCompleted: false},
-      {name:"Task 7", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true },
-      {name:"Task 8", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }, 
-      {name:"Task 9", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true }
+      {name:"Task 7", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true},
+      {name:"Task 8", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true}, 
+      {name:"Task 9", date: "2001-02-04", id: self.crypto.randomUUID(), isInProgress: false, isCompleted: true}
   
     ]);
 
@@ -30,7 +30,7 @@ const Home=()=>{
       <div className="taskLists">
         <ToDolist taskList={taskList} setTaskList={setTaskList}/>
         <Inprogresslist taskList={taskList} setTaskList={setTaskList}/>
-        <Donelist taskList={taskList}/>
+        <Donelist taskList={taskList} setTaskList={setTaskList}/>
       </div>
 
     </div>

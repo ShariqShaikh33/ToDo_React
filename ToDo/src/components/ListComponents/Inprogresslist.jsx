@@ -1,6 +1,5 @@
 import React from "react";
-import App from "./App";
-import Item from "./Item";
+import Item from "../Item";
 
 const Inprogresslist=({taskList, setTaskList})=>{
 
@@ -15,7 +14,8 @@ const Inprogresslist=({taskList, setTaskList})=>{
             <div className="list todoList" id="inprogress"> 
                 
                 {progressitemlist()?.map((e)=>{
-                    return <Item key={e.id} id={e.id} date={e.date} color={"yellow"} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
+                    return <Item key={e.id} id={e.id} time={e.time} date={e.date} color={"yellow"} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
+
                 })}
             </div>
         </div>
