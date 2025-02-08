@@ -1,28 +1,4 @@
 
-.mainitemDiv{
-    background: white;
-    border-radius: 10px;
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    flex-direction: rows;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-.itemDivleft{
-    border: 1px solid black;
-    width: 100%;
-    
-}
-
-.taskName{
-    border: 1px solid black;
-    width: 100%;
-    height: fit-content;
-}
-
 .list{
     type: none;
     width: 23rem;
@@ -34,20 +10,94 @@
     gap: 2rem;
 }
 
-.red{
-    width: 10px;
+
+.mainitemDiv{
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.red, .yellow, .green{
+    width: 100%;
+    height: 1rem;
+}
+
+.itemDivDown{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    
+}
+
+.taskUpper{
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+}
+
+.taskTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    width: 80%;
     height: 100%;
+}
+
+.taskName{
+    width: 50%;
+    height: auto;
+    font-size: 24px;
+    text-align: left;
+}
+
+.taskTimeandDate{
+    display: flex;
+    flex-direction: rows;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.line{
+    border: 1px solid gray;
+    width: 22rem;
+    margin: 1rem 0px;
+}
+
+
+
+.redmain{
+    background:rgb(255, 220, 220);
+}
+
+.red{
     background: #d0312d;
 }
 
-.yellow{
-    width: 10px;
-    height: 100%;
-    background: orange;
+.yellowmain{
+    background:rgb(255, 255, 220)
 }
 
+.yellow{
+    background: #ffa500;
+}
+
+.greenmain{
+    background:rgb(220, 255, 220);
+}
 .green{
-    width: 10px;
-    height: 100%;
-    background: green;
+    background: #138808;
 }

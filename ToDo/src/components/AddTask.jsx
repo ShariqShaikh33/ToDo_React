@@ -7,6 +7,7 @@ const AddTask=({setTaskList})=>{
         const value = event.target.todo.value;
         const date = event.target.ondate.value;
         const time = event.target.attime.value;
+        console.log(time);
         setTaskList((prevTodos) => [
           ...prevTodos,
           { name: value, id: self.crypto.randomUUID(),time: time, date: date, isInProgress: false, isCompleted: false},

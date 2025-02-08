@@ -36,27 +36,50 @@ const Item=({id, name, color,time, date, taskList, setTaskList, button1, button2
     const formatDate=()=>{
         if(date!=""){
             const currentdate = new Date(date);
-            const dateFormatter = new Intl.DateTimeFormat("en-US",{dateStyle: 'long'});
-            const formattedDate = dateFormatter.format(currentdate);
+            let dayarr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            let day = dayarr[currentdate.getDay()];
+            let todayDate = currentdate.getDate();
+            let montharr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            let month = montharr[currentdate.getMonth()];
+            console.log(month);
+            let year = currentdate.getFullYear();
+            let formattedDate = `${day}, ${todayDate} ${month} ${year}`;
+            console.log(formattedDate);
             date = formattedDate;
         }
     }
 
 
     return(
-        <div className="mainitemDiv" id={id+"item"}>
+        <div className={color+"main mainitemDiv"} id={id+"item"}> {/*vertical */}
             <div className={color}></div>
-            <div className="itemDivleft">
-                <button className={button1} onClick={()=>{shiftToDone()}}>Done</button>
-                <div className="taskName">
-                    <p>{name}</p>
+
+            <div className="itemDivDown"> {/*vertical */}
+                <div className="taskUpper">{/*horizontal */}
+                    <div className="taskTitle"> {/*vertical*/}
+                        <div className="taskName">{name}</div>
+                        <div className="taskTimeandDate"> {/*horizontal */}
+                        {formatDate()}
+                            <div className="taskDate">{date}</div>
+                            <div className="taskTime">{time}</div>
+                            
+                        </div>
+                    </div>
+
+                    <div className="taskFunctionBtn">
+                        <button className={button1} onClick={()=>{shiftToDone()}}>Done</button>                
+                        <button className={button2} onClick={()=>{shiftToProgress()}}>{"Start"}</button>
+                    </div>
                 </div>
-                <button className="delete" onClick={()=>{deleteTask()}}>Delete</button>
-                {formatDate()}
-                <div className="taskDate">{date}</div>
-                <div className="taskTime">{time}</div>
+                <div className="line"></div>
+                <div className="taskLower">
+                    <button className="delete" onClick={()=>{deleteTask()}}>Delete</button>
+                </div>
                 
-                <button className={button2} onClick={()=>{shiftToProgress()}}>{"Start"}</button>
+
+                
+                
+                
             </div>
             </div>
     )
