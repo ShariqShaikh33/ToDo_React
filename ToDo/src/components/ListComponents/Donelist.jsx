@@ -10,11 +10,11 @@ const Donelist=({taskList, setTaskList})=>{
 
     return(
         <div className="listdiv">
-            <p className="listname">Done</p>
+            <p className="listname"></p>
                 <div className="list todoList" id="done">
 
                 {doneitemlist()?.map((e)=>{
-                    return <Item key={e.id} id={e.id} color={"green"} time={e?.time} date={e.date} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"disable"} button2={"disable"}></Item>
+                    return <Item key={e.id} id={e.id} description={e.desc} color={"green"} time={e?.time} date={e.date} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"disable"} button2={"disable"}></Item>
                 })}
             </div>
         </div>

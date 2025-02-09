@@ -14,7 +14,7 @@
 .mainitemDiv{
     background: white;
     border-radius: 10px;
-    width: 100%;
+    width: 25rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -57,47 +57,85 @@
 }
 
 .taskName{
-    width: 50%;
+    width: 100%;
     height: auto;
     font-size: 24px;
     text-align: left;
+    height: fit-content;
+    overflow-wrap: break-word;
 }
 
 .taskTimeandDate{
     display: flex;
     flex-direction: rows;
-    width: 50%;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: left;
     align-items: center;
+}
+
+.taskDate{
+    margin-right: 1rem;
+}
+
+.taskTime{
+
 }
 
 .line{
     border: 1px solid gray;
-    width: 22rem;
+    width: 25rem;
     margin: 1rem 0px;
+}
+
+
+.taskLower{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskDesc{
+    width: 23.5rem;
+    height: auto;
+    overflow-wrap: break-word;
+    text-align: left;
+    margin-bottom: 1rem;
+
+}
+
+.taskDescText{
 }
 
 
 
 .redmain{
     background:rgb(255, 220, 220);
+    
 }
 
 .red{
     background: #d0312d;
+    color: rgb(255, 220, 220);
+    
+   
 }
 
 .yellowmain{
-    background:rgb(255, 255, 220)
+    background:rgb(255, 255, 220);
 }
 
 .yellow{
     background: #ffa500;
+    color: rgb(255, 255, 220);
 }
+
 
 .greenmain{
     background:rgb(220, 255, 220);
+    color: gray;
 }
 .green{
     background: #138808;
+    color: rgb(220, 255, 220);
 }

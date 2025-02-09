@@ -1,7 +1,7 @@
 import React from "react";
 import "../componentCSS/Item.css"
 
-const Item=({id, name, color,time, date, taskList, setTaskList, button1, button2})=>{
+const Item=({id, name, description, color,time, date, taskList, setTaskList, button1, button2})=>{
     const shiftToProgress=()=>{
         let newList = taskList.map((e)=>{
             if(id==e.id){
@@ -73,6 +73,9 @@ const Item=({id, name, color,time, date, taskList, setTaskList, button1, button2
                 </div>
                 <div className="line"></div>
                 <div className="taskLower">
+                    <div className="taskDesc">
+                        <text className="teskDescText">{description}</text>
+                    </div>
                     <button className="delete" onClick={()=>{deleteTask()}}>Delete</button>
                 </div>
                 

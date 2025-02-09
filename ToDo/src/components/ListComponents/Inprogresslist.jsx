@@ -10,11 +10,11 @@ const Inprogresslist=({taskList, setTaskList})=>{
 
     return(
         <div className="listdiv">
-            <p className="listname">In-Progress</p>
+            <p className="listname"></p>
             <div className="list todoList" id="inprogress"> 
                 
                 {progressitemlist()?.map((e)=>{
-                    return <Item key={e.id} id={e.id} time={e.time} date={e.date} color={"yellow"} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
+                    return <Item key={e.id} id={e.id} description={e.desc} time={e.time} date={e.date} color={"yellow"} taskList={taskList} setTaskList={setTaskList} name={e.name} button1={"active"} button2={"disable"}></Item>
 
                 })}
             </div>

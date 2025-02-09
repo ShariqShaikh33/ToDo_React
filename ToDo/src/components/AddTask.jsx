@@ -5,12 +5,13 @@ const AddTask=({setTaskList})=>{
     const handleSubmit = (event) => {
         event.preventDefault();
         const value = event.target.todo.value;
+        const desc = event.target.desc.value;
         const date = event.target.ondate.value;
         const time = event.target.attime.value;
         console.log(time);
         setTaskList((prevTodos) => [
           ...prevTodos,
-          { name: value, id: self.crypto.randomUUID(),time: time, date: date, isInProgress: false, isCompleted: false},
+          { name: value,desc: desc, id: self.crypto.randomUUID(),time: time, date: date, isInProgress: false, isCompleted: false},
         ]);
         event.target.reset();
     };
@@ -45,9 +46,23 @@ const AddTask=({setTaskList})=>{
     return(
         <div className="mainFormdiv">
             <form className="mainForm" onSubmit={handleSubmit}>
-                <input type="text" name="todo" id="todo" className="addTaskBar" placeholder="Add a new Task"></input>
-                <input type="date" id="ondate" min={minD} ></input>
-                <input type="time" id="attime" min={minTime}></input>
+                <div className="taskTitleDiv">
+                    <label for="todo">Task Title</label>
+                    <input type="text" name="todo" id="todo" className="addTaskBar" placeholder="Add a new Task"></input>
+                </div>
+                <div className="taskDescDiv">
+                    <label for="desc">Add a Description</label>
+                    <textarea name="desc" id="desc" placeholder="Write a description..."></textarea>
+                </div>
+                <div className="taskDateDiv">
+                    <label for="date">On </label>
+                    <input type="date" id="ondate" min={minD} ></input>
+                </div>
+                <div className="taskTimeDiv">
+                    <label for="time">At </label>
+                    <input type="time" id="time" min={minTime}></input>
+                </div>
+                
                 <button type="submit" className="addTaskBtn">Add Task</button>
             </form>
         </div>

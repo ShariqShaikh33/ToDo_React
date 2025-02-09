@@ -10,19 +10,22 @@ const ToDoHero=({taskList})=>{
 
     return(
         <div className="mainHeroDiv">
-            <p>ToDo App</p>
+            
             <div className="mainCounterDiv">
-                <div className="counter">
-                    <p className="counterValue">{(status_size(false,false))}</p>
-                    <p className="counterText">Task Remaining</p>
+                <div className="counter redmain">
+                    <div className="counterText reddiv">Task Remaining</div>
+                    <div className="redtext">{(status_size(false,false))}</div>
                 </div>
-                <div className="counter">
-                    <p className="counterValue">{(status_size(true,false))}</p>
-                    <p className="counterText">Task In-Progress</p>
+                
+                <div className="listLine"></div>
+                <div className="counter yellowmain">
+                    <div className="yellowdiv counterText">Task In-Progress</div>
+                    <div className="yellowtext">{(status_size(true,false))}</div>
                 </div>
-                <div className="counter">
-                    <p className="counterValue">{(status_size(false,true))}</p>
-                    <p className="counterText">Task Completed</p>
+                <div className="listLine"></div>
+                <div className="counter greenmain">
+                    <div className="greendiv counterText">Task Completed</div>
+                    <div className="greentext">{(status_size(false,true))}</div>
                 </div>
             </div>
         </div>

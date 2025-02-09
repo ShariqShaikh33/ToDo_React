@@ -1,9 +1,10 @@
 .mainHomeDiv{
     width: 100%;
     height: fit-content;
-    background: white;
     color: black;
     padding-bottom: 4rem;
+    border-radius: 20px;
+    overflow: hidden;
 
 }
 
@@ -11,8 +12,6 @@
     height: auto;
     padding: 0px;
     margin: 0px;
-    background: white;
-    border: 1px solid white;
 }
 
 .taskLists{
@@ -20,6 +19,11 @@
     direction: rows;
     width: 100%;
     justify-content:space-evenly;
+}
+.listLine{
+    border: 1px solid black;
+    height: auto;
+    width: 0px;
 }
 
 
@@ -30,7 +34,6 @@
     flex-direction: column;   
     align-items: center;
     height: fit-content;
-    background: lightblue;
     padding-bottom: 3rem;
 }
 

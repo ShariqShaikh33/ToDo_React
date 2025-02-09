@@ -3,24 +3,35 @@
     justify-content: center;
     align-items: center;
     height: 5rem;
+    width: 100%;
+    background: rgb(100,100,230);
+    color: rgb(210,210,255);
+    margin-bottom: 4rem;
 }
 
 .mainForm{
-    border: 1px solid white;
-    width: 25rem;
+    width: 80%;
     height: 2.5rem;
     display: flex;
     flex-direction: rows;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+
+.taskTitleDiv, .taskDescDiv, .taskDateDiv, .taskTimeDiv{
+    display: flex;
+    flex-direction: column;
 }
 
 .addTaskBar{
     height: 2rem;
-    width: 75%;
     background: none;
     border: none;
-    color: black;
+    color: rgb(210,210,255);
+    border: 1px solid rgb(210,210,255);
+}
+.addTaskBar::placeholder{
+    color: rgb(210,210,255);
 }
 .addTaskBar:focus{
     outline: none;
