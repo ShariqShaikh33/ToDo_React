@@ -6,8 +6,8 @@ const AddTask=({setTaskList})=>{
         event.preventDefault();
         const value = event.target.todo.value;
         const desc = event.target.desc.value;
-        const date = event.target.ondate.value;
-        const time = event.target.attime.value;
+        const date = event.target.date.value;
+        const time = event.target.time.value;
         console.log(time);
         setTaskList((prevTodos) => [
           ...prevTodos,
@@ -56,7 +56,7 @@ const AddTask=({setTaskList})=>{
                 </div>
                 <div className="taskDateDiv">
                     <label for="date">On </label>
-                    <input type="date" id="ondate" min={minD} ></input>
+                    <input type="date" id="date" min={minD} ></input>
                 </div>
                 <div className="taskTimeDiv">
                     <label for="time">At </label>
