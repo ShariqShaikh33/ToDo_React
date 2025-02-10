@@ -25,9 +25,10 @@ const Home=()=>{
   return (
     <div className="mainHomeDiv">
 
-      
-      <AddTask setTaskList={setTaskList}/>
-      <ToDoHero taskList={taskList}/>
+      <div className="Taskform">
+        <AddTask setTaskList={setTaskList}/>
+      </div>
+      {/* <ToDoHero taskList={taskList}/> */}
       <div className="taskLists">
         <ToDolist taskList={taskList} setTaskList={setTaskList}/>
         <div className="listLine"></div>

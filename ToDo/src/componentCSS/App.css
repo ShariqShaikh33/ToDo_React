@@ -1,4 +1,8 @@
 .homeDiv{
     width: 100%;
+    border: 1px solid black;
+    height: 97vh;
+    border-radius: 20px;
+    overflow: hidden;
     
 }

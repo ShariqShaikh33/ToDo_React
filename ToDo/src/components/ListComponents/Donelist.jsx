@@ -10,7 +10,6 @@ const Donelist=({taskList, setTaskList})=>{
 
     return(
         <div className="listdiv">
-            <p className="listname"></p>
                 <div className="list todoList" id="done">
 
                 {doneitemlist()?.map((e)=>{
