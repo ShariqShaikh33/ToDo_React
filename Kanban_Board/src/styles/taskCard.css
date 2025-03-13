@@ -1,0 +1,31 @@
+.none{
+    display: none;
+}
+
+.TaskCardMainDiv{
+    width: 20rem;
+}
+
+.TaskTop{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.TaskMid{
+    display: flex;
+    justify-content: space-between;
+}
+.TaskDesc{
+    width: 15rem;
+}
+.MidBtnDiv{
+}
+.MidBtn{
+}
+
+.TaskBottom{
+    display: flex;
+    justify-content: space-between;
+
+}
