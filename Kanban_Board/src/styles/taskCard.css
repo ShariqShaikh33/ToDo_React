@@ -2,30 +2,88 @@
     display: none;
 }
 
+.material-symbols-outlined{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .TaskCardMainDiv{
     width: 20rem;
 }
-
 .TaskTop{
+    height: 2rem;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    border: 1px solid black;
+    padding-left: 0.5rem;
+}
+.topBlue{
+    background: ;
+}
+.topOrange{
+    background: ;
+}
+.topGreen{
+    background: #35a97a;
+}
+.topOrange{
+    background: #ffeba3;
+}
+.topBlue{
+    background: #658cd7;
+}
+
+.deleteBtn{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+.deleteBtn:active{
+    border: 1px solid black;
 }
 
 .TaskMid{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-top: none;
+    min-height: 4.5rem;
+    padding-left: 0.5rem;
+    background: white;
 }
 .TaskDesc{
     width: 15rem;
 }
 .MidBtnDiv{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.5rem;
 }
 .MidBtn{
+    height: 3rem;
+    width: 3rem;
+    border: none;
 }
 
 .TaskBottom{
+    height: 2rem;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    border: 1px solid black;
+    border-top: none;
+    padding-left: 0.5rem;
+    background: white;
+}
+.addSubTaskBtn{
+    height: 2rem;
+    width: 2rem;
+    border: none;
 }

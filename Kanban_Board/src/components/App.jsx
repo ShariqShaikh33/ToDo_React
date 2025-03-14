@@ -12,11 +12,12 @@ const App=()=>{
     const formSubmit=(event)=>{
         event.preventDefault();
         const taskId = self.crypto.randomUUID();
+        const time = new Date();
+        const taskTime = `${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`;
         const taskName = event.target.taskInput.value;
-        const taskDesc = event.target.taskDescription.value;
         let inProgress=false;
         let isDone=false;
-        dispatch(addTask({taskId, taskName, taskDesc, inProgress, isDone}));
+        dispatch(addTask({taskId, taskName, taskTime, inProgress, isDone}));
     }
     
     let todoList = state.filter((i)=>{
@@ -42,42 +43,42 @@ const App=()=>{
                     <button id="addTaskBtn" className="addTaskBtn">Add</button>
                 </form>
 
-
-                <h3>Task List</h3>
                 <div className="taskListDiv">
 
-                    <div className="taskList " id="todo">
+                    <div className="taskList BlueList" id="todo">
                         <div className="taskListHead blue">
                             <h1>TO DO</h1>
                         </div>
-                        <div className="middle"></div>
-                        <div className="listItemsDiv">
+                        <div className="middleBlue"></div>
+                        <div className="listItemsDiv BlueListBack">
                             {todoList.map((e)=>{
-                                return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName}  taskDesc={e.taskDesc} start={"startbtn"} done={"none"}></TaskCard>
+                                return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName}  taskTime={e.taskTime} top={"topBlue"} start={"startbtn"} done={"none"}></TaskCard>
                             })}
                         </div>
                     </div>
                     
-                    <div className="taskList " id="progress">
-                        <div className="taskListHead orange">
+                    <div className="taskList OrangeList" id="progress">
+                        
+                        <div className="taskListHead  orange">
                             <h1>IN PROGRESS</h1>
                         </div>
-                        <div className="middle"></div>
-                        <div className="listItemsDiv middleList">
+                        
+                        <div className="middleOrange"></div>
+                        <div className="listItemsDiv OrangeListBack">
                             {progressList.map((e)=>{
-                                return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName} taskDesc={e.taskDesc} start={"none"} done={"donebtn"}></TaskCard>
+                                return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName} taskTime={e.taskTime} top={"topOrange"} start={"none"} done={"donebtn"}></TaskCard>
                             })} 
                         </div>
                     </div>
                     
-                    <div className="taskList" id="done">
+                    <div className="taskList GreenList" id="done">
                     <div className="taskListHead green">
                             <h1 className="headText">DONE</h1>
                         </div>
-                        <div className="middle"></div>
-                        <div className="listItemsDiv">
+                        <div className="middleGreen"></div>
+                        <div className="listItemsDiv GreenListBack">
                             {doneList.map((e)=>{
-                                return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName}  taskDesc={e.taskDesc} start={"none"} done={"none"}></TaskCard>
+                                return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName}  taskTime={e.taskTime} top={"topGreen"} start={"none"} done={"none"}></TaskCard>
                             })}
                         </div>
                     </div>

@@ -31,8 +31,7 @@
 }
 
 .taskListDiv{
-    border: 1px solid black;
-    border-radius: 10px;
+    border-top: none;
     overflow: hidden;
     min-height: 35rem;
     display: flex;
@@ -43,6 +42,21 @@
 
 .taskList{
     width: 35%;
+    overflow: hidden;
+}
+.BlueList{
+    border: 0.5rem solid #658cd7;
+    border-right:none;
+    border-top: none;
+}
+.OrangeList{
+    border-bottom: 0.5rem solid #ffeba3;
+
+}
+.GreenList{
+    border: 0.5rem solid #35a97a;
+    border-left:none;
+    border-top: none;
 }
 
 .taskListHead{
@@ -57,24 +71,31 @@
     align-items: center;
 }
 .blue{
-    border-top: 0.5rem solid blue;
+    border-top: 0.5rem solid #658cd7;
     
 }
 .orange{
-    border-top: 0.5rem solid orange;
-    border-right: 1px solid black;
-    border-left: 1px solid black;   
+    border-top: 0.5rem solid #ffeba3;  
 }
 .green{
-    border-top: 0.5rem solid green;
+    border-top: 0.5rem solid #35a97a;
 }
 
-.middle{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    background: orange;
+.middleList{
+    border-right: 1px solid black;
+    border-left: 1px solid black; 
+}
+.middleBlue{
+    background: #658cd7;
     height: 1rem;
-
+}
+.middleOrange{
+    background: #ffeba3;
+    height: 1rem;
+}
+.middleGreen{
+    background: #35a97a;
+    height: 1rem;
 }
 
 .listItemsDiv{
@@ -85,11 +106,20 @@
     display: flex;
     flex-direction: column;
     justify-content: top;
-    align-items: left;
-    padding-left: 1rem;
+    align-items: center;
     gap: 1rem;
 }
 .middleList{
     border-left: 1px solid black;
     border-right: 1px solid black;
+}
+
+.BlueListBack{
+    background: #e1e8f5;
+}
+.OrangeListBack{
+    background: #fcf8e6;
+}
+.GreenListBack{
+    background: #a7d6c3;
 }

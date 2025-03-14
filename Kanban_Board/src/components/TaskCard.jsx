@@ -16,20 +16,20 @@ const TaskCard=(prop)=>{
     }
     return(
         <div className="TaskCardMainDiv">
-            <div className="TaskTop">
-                <div className="TaskName">{prop.taskName}</div>
-                <button onClick={()=>{deleteT(prop.id)}}>Delete</button>
+            <div className={prop.top+" TaskTop"}>
+                <div className="TaskName">{prop.taskTime}</div>
+                <button className="deleteBtn" onClick={()=>{deleteT(prop.id)}}><span className={prop.top+" material-symbols-outlined"}>delete</span></button>
             </div>
             <div className="TaskMid">
-                <div className="TaskDesc">{prop.taskDesc}</div>
+                <div className="TaskDesc">{prop.taskName}</div>
                 <div className="MidBtnDiv">
-                    <button onClick={()=>{startT(prop.id)}} className={"MidBtn "+prop.start}>Start</button>
+                    <button onClick={()=>{startT(prop.id)}} className={"MidBtn BlueListBack "+prop.start}>Start</button>
                     <button onClick={()=>{completeT(prop.id)}} className={"MidBtn "+prop.done}>Done</button>
                 </div>
             </div>
             <div className="TaskBottom">
                 <div className="SubTask"></div>
-                <button>+</button>
+                <button className={prop.top+" addSubTaskBtn"}>+</button>
             </div>
         </div>
     )
