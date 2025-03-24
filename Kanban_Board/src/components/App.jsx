@@ -1,8 +1,25 @@
 import {React} from "react";
+import { useState } from "react";
+import Modal from "react-modal";
 import { useSelector,useDispatch } from "react-redux";
 import {addTask} from "../redux files/Slices/addTaskSlice"
 import TaskCard from "./TaskCard";
 import "../styles/App.css";
+import "../styles/form.css";
+
+
+Modal.setAppElement('#root');
+
+const modalStyle = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    }
+}
 
 const App=()=>{
     const dispatch = useDispatch();
@@ -18,6 +35,7 @@ const App=()=>{
         let inProgress=false;
         let isDone=false;
         dispatch(addTask({taskId, taskName, taskTime, inProgress, isDone}));
+        closeModal();
     }
     
     let todoList = state.filter((i)=>{
@@ -30,6 +48,15 @@ const App=()=>{
         return i.inProgress==false && i.isDone==true;
     })
 
+    const [modalIsOpen, setIsOpen] = useState(false);
+    
+    function openModal(){
+        setIsOpen(true);
+    }
+    function closeModal(){
+        setIsOpen(false);
+    }
+
     return(
         <div className="AppDiv">
             <div className="Header">
@@ -37,16 +64,12 @@ const App=()=>{
             </div>
             <div className="Body">
 
-                <form id="taskForm" onSubmit={formSubmit}>
-                    <input name="taskInput" id="taskInput" className="taskInput" placeholder="Input Task"></input>
-                    <input name="taskDescription" id="taskDescription" className="taskDescription" placeholder="Description"></input>
-                    <button id="addTaskBtn" className="addTaskBtn">Add</button>
-                </form>
+                
 
                 <div className="taskListDiv">
 
                     <div className="taskList BlueList" id="todo">
-                        <div className="taskListHead blue">
+                        <div className="taskListHead BlueListBack blue">
                             <h1>TO DO</h1>
                         </div>
                         <div className="middleBlue"></div>
@@ -54,12 +77,26 @@ const App=()=>{
                             {todoList.map((e)=>{
                                 return <TaskCard key={e.taskId} id={e.taskId} taskName={e.taskName}  taskTime={e.taskTime} top={"topBlue"} start={"startbtn"} done={"none"}></TaskCard>
                             })}
+                            <div className="addTaskDiv">
+                                <button className="addTaskBtn" onClick={openModal}>+</button>
+                                <Modal
+                                    isOpen={modalIsOpen}
+                                    onRequestClose={closeModal}
+                                    style={modalStyle}
+                                    contentLabel="Modal 1"
+                                >
+                                    <form className="taskForm" id="taskForm" onSubmit={formSubmit}>
+                                        <input name="taskInput" id="taskInput" className="taskInput" placeholder="Input Task" required></input>
+                                        <button className="addTaskModalBtn">Add</button>
+                                    </form>
+                                </Modal>
+                            </div>
                         </div>
                     </div>
                     
                     <div className="taskList OrangeList" id="progress">
                         
-                        <div className="taskListHead  orange">
+                        <div className="taskListHead OrangeListBack orange">
                             <h1>IN PROGRESS</h1>
                         </div>
                         
@@ -72,7 +109,7 @@ const App=()=>{
                     </div>
                     
                     <div className="taskList GreenList" id="done">
-                    <div className="taskListHead green">
+                    <div className="taskListHead GreenListBack green">
                             <h1 className="headText">DONE</h1>
                         </div>
                         <div className="middleGreen"></div>

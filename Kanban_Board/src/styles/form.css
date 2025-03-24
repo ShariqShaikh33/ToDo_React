@@ -1,0 +1,44 @@
+.addTaskDiv{
+    border: 1px solid #e1e8f5;
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addTaskBtn{
+    font-size: 70px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: #bed3fa;
+    color: #658cd7;
+}
+.addTaskBtn:active{
+    background: #658cd7;
+    color: #bed3fa;
+}
+
+.taskForm{
+    width: 20rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.taskInput{
+    width: 14rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+    font-size: 15px;
+}
+.taskInput::placeholder{
+    font-size: 15px;
+}
+
+.addTaskModalBtn{
+    height: 3rem;
+    width: 5rem;
+    font-size: 15px;
+}

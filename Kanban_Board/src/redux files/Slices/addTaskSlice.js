@@ -1,13 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
-    {inProgress: false, isDone: false, taskTime: "30/06/2003", taskId: "1", taskName: "Task 1"},
-    {inProgress: false, isDone: false, taskTime: "30/06/2003", taskId: "12", taskName: "Task 2"},
-    {inProgress: true, isDone: false, taskTime: "30/06/2003", taskId: "123", taskName: "Task 3"},
-    {inProgress: true, isDone: false, taskTime: "30/06/2003", taskId: "1234", taskName: "Task 4"},
-    {inProgress: false, isDone: true, taskTime: "30/06/2003", taskId: "12345", taskName: "Task 5"},
-    {inProgress: false, isDone: true, taskTime: "30/06/2003", taskId: "123456", taskName: "Task 6"}
-];
+const initialState = [];
 
 const addTaskSlice = createSlice({
     name: "TaskLists",
